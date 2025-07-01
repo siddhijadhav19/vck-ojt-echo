@@ -2,7 +2,7 @@ const NotFoundPage = () =>{
     return(
         <div>  
 
-            </div>
+        </div>
     )
 }
 

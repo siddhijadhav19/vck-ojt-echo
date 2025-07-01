@@ -2,12 +2,14 @@ import Header from "../components/Header/Header";
 
 const AdmissionPage = () =>{
     return(
-        <>  
+        <div>
         <Header/>
-        <h1 color="blue">Admission at Vivekanand College</h1>
+               <div id="container" class="scroll-bar">   
+       <div className="h1">
+<div className="text"> <h1>Admission at Vivekanand College</h1></div></div>
         <p>Welcome to the Admission page of Vivekanand College!We are delighted you're considering joining our vibrant academic community.Our admission process is designed to be straighforward and accessible.</p><br/>
         <p>Please review the eligibility criteria and key dates below for the upcoming academic year.For any queries,feel free to contact our admission office.</p><br/>
-        <h1>Eligibility Criteria for Undergraduate Programs</h1><hr></hr>
+        <h2>Eligibility Criteria for Undergraduate Programs</h2><hr></hr>
         <table border="1px">
             <thead>
                  <tr> 
@@ -43,7 +45,7 @@ const AdmissionPage = () =>{
             </thead>
 
         </table> <br/>
-        <h1>Application Process</h1>
+        <h2>Application Process</h2>
         <hr>
         </hr>
         <ol>
@@ -53,9 +55,10 @@ const AdmissionPage = () =>{
             <li><b>Merit List & Interview:</b>Check the merit list and attend the interview if shortlisted.</li>
             <li><b>Fee Payment:</b>Complete the admission by paying the required fees.</li>
         </ol>
-        <p>For detailed information on postgraduate program admissions, specific program syllabi, and fee structures, please visit our <a href="Courses page"></a> or <a href="Contact us"></a> directly.</p>
-
-            </>
+        <p>For detailed information on postgraduate program admissions, specific program syllabus, and fee structures, please visit our <a href="/courses"><u>Courses Page</u></a> or <a href="/contactus"><u>Contact Us</u></a> directly.</p>
+</div>
+            </div>
+           
     )
 }
 

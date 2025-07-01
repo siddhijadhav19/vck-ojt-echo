@@ -1,0 +1,205 @@
+.header1{
+   background-color:#007bff;
+   color: white;
+  padding: -10px 20px;
+  display:flex;
+  justify-content: space-between;
+  /* Space out college name and nav */
+  align-items: center;
+  box-shadow: none;
+  position: sticky;
+  /* Make header sticky */
+  top: 0;
+  z-index: 999;
+  /* Ensure header is above other content */
+  margin-top: -250px;
+  margin-bottom: 200px;
+  width: 1527px;
+  border-bottom: 3px;
+}
+
+.logo {
+  background-color: #007bff;
+    font-weight: bold;
+    text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1.8em;
+}
+.logo a h4 {
+  color: white;
+}
+
+.nav{
+    color: white;
+  padding: 5px 0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease,border-bottom 0.3s ease;
+}
+
+.desktop-nav{
+    display:flex ;
+    align-items: center;
+    gap: 25px;
+
+}
+
+.nav-item:hover {
+  color: #E0E0E0;
+  border-bottom: 2px solid #E0E0E0;
+}
+
+.apply-btn {
+  background-color:rgb(21, 150, 21);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  cursor:pointer;
+  border-radius: 5px;
+  
+}
+.apply-btn:hover {
+  background-color: rgb(19, 145, 19); /* slightly deeper green */
+  color: rgb(0, 145, 255);
+}
+
+.hamburger-icon{
+ display: block;
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu{
+  display:  none; /*  Hide by default on laptop screens */
+  background:none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  z-index: 1002;
+   /* Ensure it's above the drawer if needed */
+}
+
+/* Drawer Navigation (hidden by default) */
+.drawer-nav {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    /* Start off-screen to the right */
+    width: 200px;
+    /* Width of the drawer */
+    height: 100%;
+    background-color:white;
+    /* Light background for drawer */
+    box-shadow: -5px 0 15px #0003;
+    transition: right 0.3s ease-in-out;
+    /* Slide-in animation */
+    z-index: 1001;
+    /* Above page content, below overlay */
+    display: flex;
+    flex-direction: column;
+   padding-top: 60px;
+  /* Space for close button/header */
+}
+
+.drawer-nav.open {
+  right: 0;
+  /* Slide in when open */
+}
+
+.drawer-nav .nav-item {
+  color: black;
+  /* Darker text for drawer links */
+  padding: 15px 20px;
+  border-bottom: 1px solid white;
+  /* Full width links */
+  box-sizing: border-box;
+  /* Include padding in width */
+  width: 100%;
+}
+
+.drawer-nav .nav-item:hover {
+  background-color: rgb(28, 28, 28);
+  color: #007BFF;
+  border-bottom: 1px solid #E0E0E0;
+  /* Reset border for hover if needed */
+}
+
+.drawer-nav .nav-item.btn.primary-btn {
+  /* margin: 50px; Space for button in drawer */
+
+  text-align: center;
+}
+
+/* Close button inside drawer */
+.close-drawer-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #343A40;
+  cursor: pointer;
+  z-index: 1010;
+}
+/* Overlay when drawer is open */
+.drawer-overlay {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Semi-transparent black */
+  z-index: 1000;
+  /* Below drawer, above page content */
+}
+
+.drawer-nav.open+.drawer-overlay {
+  display: block;
+  /* Show when drawer is open */
+}
+
+/* --- Media Queries for Mobile --- */
+@media (max-width: 768px) {
+  .desktop-nav {
+    display: none;
+    /* Hide desktop nav on mobile */
+  }
+  .hamburger-menu {
+    display:block;
+    /* Show hamburger on mobile */
+ }
+  .header1{
+    justify-content: space-between;
+  }
+.logo{
+    font-size: 1.5em ;
+}
+}
+
+
+.drawer-nav .apply-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 14px 24px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 5px;
+  display: block;
+  width: 80%;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.drawer-nav .apply-btn:hover {
+  background-color: #218838;
+}
