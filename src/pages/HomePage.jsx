@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header/Header";
 const HomePage = () =>{
     return(
-<div>
+   <div>
+
         <Header/>
+        <div className="main-container">
            <div id="container" class="scroll-bar">
           <div className="section">
          
@@ -15,7 +17,7 @@ const HomePage = () =>{
             <Link to="/admission" class="apply-btn"><u>Apply Now!</u></Link>   
             </div>    
             </div>
-        
+            
             <p><b>Vivekanand College</b> is a premier educational institution dedicated to fostering academic excellence, innovation, and holistic development. Established in 1980, we have proudly served generations of students, empowering them to achieve their full potential.</p>
             <p>At Vivekanand College, we believe in a vibrant learning environment that extends beyond textbooks. Our state-of-the-art facilities, experienced faculty, and diverse student community create a unique ecosystem where curiosity thrives and future leaders are shaped.</p>
             <h2>Why Choose Vivekanand College?</h2><hr/>
@@ -36,14 +38,17 @@ const HomePage = () =>{
                     <b>Strong Placements:</b>Excellent career opportunities with leading companies.
                 </li>
             </ul>
-            <h2>Campus Life & Facilities</h2>
-           <img src="/Images/students-studying.jpeg" alt="Home" style={{width:"400px", height:"350px"}}/><img src="/Images/campus-life.jpg"alt="Home" style={{width:"400px", height:"350px"}}/><br/>
+            <h2>Campus Life & Facilities</h2><hr/>
+            <div className="image-gallery">
+           <img src="/Images/students-studying.jpeg" alt="Home" />
+           <img src="/Images/campus-life.jpg"alt="Home" /><br/>
+           </div>
            
             <p>Explore our vibrant campus and state-of-the-art facilities designed to enhance your learning experience and personal growth.<br/>Ready to explore our courses?</p>
         
     <div className="h1"><Link to="/courses" class="apply-btn">Explore Courses</Link></div>
         </div>
-        
+        </div>
     </div>
     )
 }

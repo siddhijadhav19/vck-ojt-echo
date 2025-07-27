@@ -17,7 +17,7 @@ const CoursesPage = () =>{
                 <li><b>Bachelor of Science (B.Sc.)</b></li>
                 <li>Computer Science (3 years)</li>
                 <li>Information Technology (3 years)</li>
-                <li>Biotechnology (3 years)</li>
+                <li>Biotechnology (3 years)</li> 
                 <li><b>Bachelor of Commerce (B.Com)</b></li>
                 <li>Accounting & Finance (3 years)</li>
                 <li>Banking & Insurance (3 years)</li>
