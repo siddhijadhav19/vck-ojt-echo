@@ -15,7 +15,11 @@ const Header = () =>{
         <header className='header1'>  
                 <div className='logo'>
                    
+<<<<<<< HEAD
                <div className='u'> <Link to="/"><h2>Vivekanand College </h2></Link></div>
+=======
+                <Link to="/"><h2>Vivekanand College </h2></Link>
+>>>>>>> 2b0a70f6ffd1e38644b67c03a74921e3f7aa2d4f
                 {/* College Name/Logo for desktop & mobile */}
                 </div>
                {/* Desktop Navigation */}
