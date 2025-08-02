@@ -15,17 +15,15 @@
 
 a {
   font-weight: 500;
-<<<<<<< HEAD
   color: white;
-=======
-  color: blue;
->>>>>>> 2b0a70f6ffd1e38644b67c03a74921e3f7aa2d4f
   text-decoration: inherit;
 }
 a.nav{
   color: white;
 }
-
+a.nav hover{
+  color: blue;
+}
 
 body {
   margin: 0;
