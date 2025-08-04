@@ -430,7 +430,7 @@
   border-bottom: 1px solid #E0E0E0;
   text-align: center;
   flex-shrink: 0;
-  position: relative; /* Needed for positioning the close button inside */
+  position: relative; 
 }
 .chatbot-header h2 {
   margin: 0;
