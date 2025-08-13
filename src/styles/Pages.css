@@ -1,9 +1,6 @@
-.text{
-    color: blue;
-}
- 
+/* src/pages/pages.css  */
 .main-container {
-  background-color: #52d2d2;
+  background-color: #39c4c4;
    flex-grow: 1;
   display: flex;
   justify-content: center;
@@ -11,75 +8,147 @@
   padding: 20px;
   /* Light grey background for the main container */
 }
-
-.container{
-  background-color: white;
-  margin: 10px auto;
-  padding:1rem 2rem;
-  width: 100%;
-  max-width: 800px;
-  border: 2px solid rgb(211, 211, 211);
-  border-radius: 1px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  text-align: left;
-  color: black;
-  box-sizing: border-box;
+.page-container {
+  max-width: 960px;
+  /* Max width for content to prevent it from stretching too wide */
+  height: 500px;
+  margin: 20px auto;
+  /* Center the content with some top/bottom margin */
+  padding: 20px;
+  background-color: #FFFFFF;
+  /* White background for page content */
+  border-radius: 8px;
+  /* Slightly rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  /* Subtle shadow */
 }
 
-
-.scroll-bar{
-  width: 100%;
-  height: 505px;
-  overflow: auto;
-  
-}
-.h1 {
+.page-container h1 {
+  color: #007BFF;
+  /* Primary blue for headings */
   text-align: center;
-  padding: 0px ;
+  margin-bottom: 25px;
+  font-size: 2.5em;
 }
 
-.u{
-  text-decoration: underline;
-  color: blue;
+.page-container h2 {
+  color: #343A40;
+  /* Darker grey for subheadings */
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.8em;
+  border-bottom: 1px solid #eee;
+  /* Light line under subheadings */
+  padding-bottom: 10px;
 }
-.banner-image{
+
+.page-container p {
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.page-container ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.page-container li {
+  margin-bottom: 8px;
+}
+
+.call-to-action {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.call-to-action .btn {
+  display: inline-block;
+  background-color: #28A745;
+  /* Green button */
+  color: white;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.call-to-action .btn:hover {
+  background-color: #218838;
+}
+
+
+/* HomePage Specific Styles */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  /* Adjust as needed */
+  overflow: hidden;
+  margin-bottom: 40px;
+  border-radius: 8px;
+  /* Match page-container */
+}
+
+.hero-banner-image {
   width: 100%;
   height: 100%;
   object-fit: fill;
+  /* Cover the area, cropping if necessary */
   filter: brightness(60%);
+  /* Darken image for text readability */
 }
 
-.overlay-text{
+.hero-overlay-text {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   color: white;
   text-align: center;
   width: 90%;
+  /* Ensure text doesn't hit edges */
 }
 
-@media (max-width: 768px) {
-    .image-gallery img {
-        height: 180px;
-    }
+.hero-overlay-text h1 {
+  color: white;
+  /* Override blue from .page-container h1 */
+  font-size: 3.5em;
+  /* Larger heading for banner */
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  /* Add shadow for readability */
+}
+
+.hero-overlay-text p {
+  color: white;
+  font-size: 1.3em;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-btn {
+  background-color: #28A745;
+  /* Green button for Apply Now */
+  font-size: 1.2em;
+  padding: 15px 30px;
 }
 
 .image-gallery {
-    display: block;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   /* Responsive grid */
   gap: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
-  width: 100%;
-  height: auto;
 }
 
 .image-gallery img {
   width: 100%;
-  height: 300px;
+  height: 200px;
   /* Fixed height for consistency */
   object-fit: cover;
   border-radius: 8px;
@@ -93,148 +162,7 @@
   /* Slightly enlarge on hover */
 }
 
-.apply-btn {
-  background-color:rgb(21, 150, 21);
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  font-weight: bold;
-  cursor:pointer;
-  border-radius: 5px;
-  
-}
-.apply-btn:hover {
-  background-color: rgb(19, 145, 19); /* slightly deeper green */
-  color: rgb(0, 145, 255);
-}
-.call-to-action {
-  text-align: center;
-  margin-top: 40px;
-}
-
-.call-to-action .apply-btn {
-  display: inline-block;
-  background-color: #28A745;
-  /* Green button */
-  color: white;
-  padding: 12px 25px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.call-to-action .apply-btn:hover {
-  background-color: #218838;
-}
-
-.section{
-  position: relative;
-  max-width: 1500px;
-  height:350px;
-  overflow:hidden;
-  margin-top: 30px;
-  margin-bottom: 40px;
-  border-radius: 8px;
-}
-.vid{
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-.video-container {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    background-color: #000;
-    border-radius: 8px;
-    overflow: hidden;
-}
-.video-caption{
-    font-family: Arial,sans-serif;
-    text-align: center;
-    padding: 10px;
-    font-style: italic;
-    background-color: #f0f0f0;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 15px;
-}
-
-/* --- Basic Responsive Styles --- */
-@media (max-width: 768px) {
-  .main-container{
-    padding: 20px 10px;
-  }
-  .container {
-    margin: 15px auto;
-    /* Slightly less margin on smaller screens */
-    padding: 1rem;
-    /* Slightly less padding */
-    max-width: 90%;
-  }
-
-  /* Home Page - Hero Section */
-  .section {
-    height: auto;
-    /* Shorter banner on smaller screens */
-  }
-
-  .hero-overlay-text {
-    font-size: 2.2em;
-    /* Smaller heading */
-  }
-
- 
-
-  .hero-btn {
-    padding: 10px 20px;
-    /* Smaller button */
-    font-size: 1em;
-  }
-
-  /* Image Gallery */
-  
-  .banner-image {
-    height: 350px;
-    /* Adjust height for stacked images */
-  }
-
-  /* Admissions Table */
-   .admissions-table, .course-details-table {
-    display: block; /* Make table block level */
-   overflow-x: auto; /*Enable horizontal scroll for table on small screens*/ 
-  white-space: nowrap; /*Prevent content from wrapping inside cells*/ 
-   -webkit-overflow-scrolling: touch;/* For smooth scrolling on iOS*/ 
- } 
- .admissions-table thead,
-  .admissions-table tbody,
-  .admissions-table th,
-  .admissions-table td,
-  .admissions-table tr {
-    display: block;
-    /* Make table elements stack */
-    width: auto;
-    /* Allow natural width */
-  }
-
-}
-
-@media (max-width: 480px) {
-  .main-container, .container {
-    background-color: red !important;
-    padding: 10px;
-     max-width: 100%; /* or omit max-width entirely */
-
-  }
-
-  .overlay-text  {
-    font-size: 1.8em;
-  }
-
-}
-
+/* Table Styles for Admissions Page */
 .admissions-table {
   width: 100%;
   border-collapse: collapse;
@@ -271,4 +199,183 @@
 .admissions-table tbody tr:hover {
   background-color: #E2F0FF;
   /* Highlight row on hover */
+}
+
+/* Styles for ordered list */
+.page-container ol {
+  margin-left: 25px;
+  margin-bottom: 20px;
+  list-style-type: decimal;
+  color: #555;
+}
+
+.page-container ol li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+
+/* Video Section Styles */
+.video-container {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #000;
+  /* Black background for video */
+  border-radius: 8px;
+  overflow: hidden;
+  /* Ensures video corners are rounded */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.course-video {
+  display: block;
+  /* Remove extra space below video */
+  max-width: 100%;
+  /* Ensure it's responsive */
+  height: auto;
+  /* Maintain aspect ratio */
+}
+
+.video-caption {
+  text-align: center;
+  padding: 10px;
+  color: #777;
+  font-style: italic;
+  background-color: #F0F0F0;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+
+/* CSS Animation Definitions */
+/* Keyframes for Fade In Up animation */
+@keyframes fadeInUptoBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+    /* Start 20px below its final position */
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    /* End at its original position */
+  }
+}
+
+/* Apply animation to elements with this class */
+.animate-fade-in-up {
+  animation: fadeInUptoBottom 1s ease-out forwards;
+  /* 1s duration, smooth ease-out, stays at end state */
+  /* You might want to add animation-delay if multiple elements animate in sequence */
+}
+
+/* Responsive Map */
+.map-responsive {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px; /* Matches page-container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+
+
+/* --- Basic Responsive Styles --- */
+@media (max-width: 768px) {
+  .main-container{
+    padding: 20px 10px;
+  }
+  .page-container {
+    
+    /* Slightly less margin on smaller screens */
+    padding: 15px;
+    /* Slightly less padding */
+  }
+
+  /* Home Page - Hero Section */
+  .hero-section {
+    height: 250px;
+    /* Shorter banner on smaller screens */
+  }
+
+  .hero-overlay-text h1 {
+    font-size: 2.2em;
+    /* Smaller heading */
+  }
+
+  .hero-overlay-text p {
+    font-size: 1em;
+    /* Smaller paragraph */
+  }
+
+  .hero-btn {
+    padding: 10px 20px;
+    /* Smaller button */
+    font-size: 1em;
+  }
+
+  /* Image Gallery */
+  .image-gallery {
+    grid-template-columns: 1fr;
+    /* Stack images in a single column */
+  }
+
+  .image-gallery img {
+    height: 180px;
+    /* Adjust height for stacked images */
+  }
+
+  /* Admissions Table */
+  /* .admissions-table, .course-details-table {
+    display: block; /* Make table block level */
+  /* overflow-x: auto; Enable horizontal scroll for table on small screens */
+  /* white-space: nowrap; Prevent content from wrapping inside cells */
+  /* -webkit-overflow-scrolling: touch; For smooth scrolling on iOS */
+  /* } */
+  */ .admission-table thead,
+  .admission-table tbody,
+  .admission-table th,
+  .admission-table td,
+  .admission-table tr {
+    display: block;
+    /* Make table elements stack */
+    width: auto;
+    /* Allow natural width */
+  }
+  .map-responsive {
+    padding-bottom: 65%; /* Taller for tablets */
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  /* Further adjustments for very small screens (phones) */
+  .page-container {
+    padding: 10px;
+  }
+
+  .hero-overlay-text h1 {
+    font-size: 1.8em;
+  }
+
+  .hero-overlay-text p {
+    font-size: 0.9em;
+  }
+  .map-responsive {
+    padding-bottom: 75%; /* Taller for mobile */
+    border-radius: 6px;
+  }
 }
